@@ -14,7 +14,7 @@ const DeleteRecipeButton = ({ recipeId }) => {
     setSearchTerm('');
   };
 
-  return <button onClick={handleDelete}>Delete Recipe</button>;
+  return <button className='delete-btn' onClick={handleDelete}>Delete Recipe</button>;
 };
 
 export default DeleteRecipeButton;

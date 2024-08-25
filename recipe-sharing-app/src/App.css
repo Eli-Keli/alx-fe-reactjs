@@ -35,3 +35,21 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.delete-btn {
+  padding: 0.5rem;
+  color: white;
+  background-color: #ff0000cc;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.home-btn {
+  padding: 0.5rem;
+  color: white;
+  background-color: #0000ffcc;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
