@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import  {useState} from 'react';
-import {useRecipeStore} from './recipeStore';
+import useRecipeStore from './recipeStore';
 
 const EditRecipeForm = ({ recipe }) => {
   const [title, setTitle] = useState(recipe.title);
