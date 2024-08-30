@@ -9,12 +9,12 @@ function RegistrationForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!username || !email || !password) {
-            setError('All fields are required');
-        } else {
-            // Perform form submission logic
+        if (!username) setError('Username is required');
+        if (!email) setError('Email is required');
+        if (!password) setError('Password is required');
+        else {
+            console.log('Form submitted successfully!');
             setError('');
-            // Reset form fields
             setUsername('');
             setEmail('');
             setPassword('');
