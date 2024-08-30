@@ -5,16 +5,16 @@ function RegistrationForm() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [errors, setErrors] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!username) setError('Username is required');
-        if (!email) setError('Email is required');
-        if (!password) setError('Password is required');
+        if (!username) setErrors('Username is required');
+        if (!email) setErrors('Email is required');
+        if (!password) setErrors('Password is required');
         else {
             console.log('Form submitted successfully!');
-            setError('');
+            setErrors('');
             setUsername('');
             setEmail('');
             setPassword('');
@@ -47,7 +47,7 @@ function RegistrationForm() {
                     onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
-            {error && <div>{error}</div>}
+            {errors && <div>{errors}</div>}
             <button type="submit">Register</button>
         </form>
     );
