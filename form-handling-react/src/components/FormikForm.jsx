@@ -9,7 +9,6 @@ const validationSchema = Yup.object().shape({
 
 function FormikForm() {
     const handleSubmit = (values, { setSubmitting, resetForm }) => {
-        // Perform form submission logic
         setSubmitting(false);
         resetForm();
     };
