@@ -10,15 +10,6 @@
     "preview": "vite preview",
     "test": "jest"
   },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-dom"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest"
-    }
-  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -32,7 +23,6 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "babel-jest": "^29.7.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

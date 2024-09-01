@@ -1,85 +1,52 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import AddTodoForm from './AddTodoForm';
 
-const TodoList = () => {
-    const [todos, setTodos] = useState([
-        { id: 1, text: "Learn React", completed: false },
-        { id: 2, text: "Build a Todo App", completed: false },
-        { id: 3, text: "Write Tests", completed: false },
-    ]);
-    const [newTodo, setNewTodo] = useState("");
+function TodoList() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React in depth', completed: false },
+    { id: 2, text: 'Learn javaScript in depth', completed: false },
+  ]);
+  const [newTodo, setNewTodo] = useState('');
 
-    // Add todo
-    const addTodo = (e) => {
-        e.preventDefault();
-        if (newTodo.trim()) {
-            setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
-            setNewTodo("");
-        }
-    };
+  const addTodo = () => {
+    if (newTodo.trim()) {
+      setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
+      setNewTodo('');
+    }
+  };
 
-    // Toggle todo status
-    const toggleTodo = (id) => {
-        setTodos(
-            todos.map((todo) =>
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo
-            )
-        );
-    };
+  const toggleTodo = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ));
+  };
 
-    // Delete todo
-    const deleteTodo = (id) => {
-        setTodos(todos.filter((todo) => todo.id !== id));
-    };
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
 
-    return (
-        <div>
-            <h1>Todo List</h1>
-            <form onSubmit={addTodo}>
-                <input
-                    type="text"
-                    value={newTodo}
-                    onChange={(e) => setNewTodo(e.target.value)}
-                    placeholder="Add new todo"
-                />
-                <button type="submit" style={{
-                    marginLeft: "10px",
-                    backgroundColor: "green",
-                    color: "white",
-                    cursor: "pointer",
-                    borderRadius: "5px",
-                    padding: "5px",
-                    fontSize: "12px",
-                }}>Add Todo</button>
-            </form>
-            <ul>
-                {todos.map((todo) => (
-                    <li key={todo.id}>
-                        <span
-                            onClick={() => toggleTodo(todo.id)}
-                            style={{
-                                textDecoration: todo.completed ? "line-through" : "none",
-                            }}
-                        >
-                            {todo.text}
-                        </span>
-                        <button
-                        style={{
-                            marginLeft: "10px",
-                            backgroundColor: "red",
-                            color: "white",
-                            cursor: "pointer",
-                            borderRadius: "5px",
-                            padding: "5px",
-                            fontSize: "12px",
-                        }}
-                        onClick={() => deleteTodo(todo.id)
-                        }>Delete</button>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+  return (
+    <div>
+      <ul>
+        {todos.map(todo => (
+          <li key={todo.id} onClick={() => toggleTodo(todo.id)} style={{ 
+            textDecoration: todo.completed ? 'none' : 'line-through',
+            cursor:'pointer' }}>
+            {todo.text}
+            <button onClick={(e) => { e.stopPropagation(); deleteTodo(todo.id); }}>Delete</button>
+          </li>
+        ))}
+      </ul>
+      <input
+        type="text"
+        value={newTodo}
+        onChange={(e) => setNewTodo(e.target.value)}
+        placeholder="Add a new todo"
+      />
+      <button onClick={addTodo}>Add Todo</button>
+    </div>
+  );
+}
 
 export default TodoList;
