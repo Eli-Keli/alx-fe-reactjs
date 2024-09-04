@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold">Responsive Design Implementation Using Tailwind CSS</h1>
+      <h1 className="text-3xl font-bold"> Adding Advanced Interactivity and Transitions with Tailwind CSS</h1>
       <UserProfile />
     </div>
   )
