@@ -1,9 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import HomePage from './components/HomePage'
 
 function App() {
   return (
-    <div className='text-blue-500 text-3xl'>App</div>
+    <div>
+      <HomePage />
+    </div>
   )
 }
 

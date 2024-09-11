@@ -1,0 +1,34 @@
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react'
+
+const HomePage = () => {
+    const [recipe, setRecipe] = useState()
+
+    useEffect(() => {
+        //  load the recipe data from data.json
+        const fetchRecipe = async () => {
+            const response = await fetch("http://localhost:3000/recipes")
+            const data = await response.json()
+            setRecipe(data)
+        }
+        fetchRecipe()
+    }, [])
+    return (
+        // display each recipe in a card layout, using Tailwind CSS for styling
+        <div className="flex flex-wrap justify-center">
+            <div className="w-full md:w-1/2 p-4">
+                {recipe && recipe.map((item) => (
+                    <div key={item.id} className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                        <img className="w-full h-48 object-cover object-center rounded-t-lg" src={item.image} alt={item.title} />
+                        <div className="p-4">
+                            <h1 className="text-2xl font-bold mb-2">{item.title}</h1>
+                            <p className="text-gray-600">{item.summary}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default HomePage
