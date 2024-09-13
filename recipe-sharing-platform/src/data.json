@@ -1,34 +1,123 @@
-{
-    "recipes": [
-        {
-            "id": 1,
-            "title": "Spaghetti Carbonara",
-            "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-            "image": "https://via.placeholder.com/150",
-            "ingredients": [
-                "200g spaghetti",
-                "100g ground beef",
-                "1 can of tomato sauce",
-                "1 onion, diced",
-                "2 cloves garlic, minced",
-                "Salt and pepper to taste"
-            ],
-            "instructions": "Cook spaghetti according to package instructions. In a separate pan, cook the beef until browned..."
-        },
-        {
-            "id": 2,
-            "title": "Chicken Tikka Masala",
-            "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-            "image": "https://via.placeholder.com/150",
-            "ingredients": [
-                "2 chicken breasts, cubed",
-                "1 onion, diced",
-                "1 can of coconut milk",
-                "2 tbsp curry powder",
-                "1 tsp turmeric",
-                "Salt and pepper to taste"
-            ],
-            "instructions": "In a large pot, sauté the onion until translucent. Add chicken and cook until browned..."
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "title": "Spaghetti Carbonara",
+        "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+        "ingredients": [
+            "200g spaghetti",
+            "2 large eggs",
+            "100g grated Parmesan cheese",
+            "150g bacon",
+            "Salt and black pepper to taste"
+        ],
+        "steps": [
+            "Cook the spaghetti according to the package instructions.",
+            "In a bowl, whisk together eggs and grated cheese.",
+            "Cook the bacon in a pan until crispy, then crumble into pieces.",
+            "Drain the pasta and mix with the egg mixture and bacon.",
+            "Season with salt and pepper to taste and serve."
+        ],
+        "instructions": [
+            "Prepare the spaghetti according to package instructions.",
+            "Whisk eggs and Parmesan cheese in a bowl.",
+            "Cook bacon until crispy and crumble it.",
+            "Mix pasta with egg mixture and bacon.",
+            "Season and serve."
+        ],
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 2,
+        "title": "Chicken Tikka Masala",
+        "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato-based gravy.",
+        "ingredients": [
+            "500g chicken breast",
+            "200g plain yogurt",
+            "2 tablespoons garam masala",
+            "1 tablespoon turmeric",
+            "1 tablespoon paprika",
+            "1 tablespoon lemon juice",
+            "2 onions, chopped",
+            "2 garlic cloves, minced",
+            "1 tablespoon ginger, minced",
+            "400g tomatoes, chopped",
+            "200ml cream",
+            "Salt to taste"
+        ],
+        "steps": [
+            "Marinate the chicken with yogurt, spices, and lemon juice for at least 2 hours.",
+            "Grill or bake the chicken until cooked through.",
+            "Prepare the masala sauce by cooking onions, garlic, ginger, and tomatoes.",
+            "Add cream, spices, and the grilled chicken to the sauce.",
+            "Simmer until the sauce thickens and the chicken is well-coated.",
+            "Serve with rice or naan bread."
+        ],
+        "instructions": [
+            "Marinate chicken.",
+            "Grill chicken.",
+            "Cook masala sauce.",
+            "Combine chicken with sauce.",
+            "Serve with rice or naan."
+        ],
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 3,
+        "title": "Beef Stroganoff",
+        "summary": "A Russian dish of sautéed beef served in a creamy sauce with mushrooms.",
+        "ingredients": [
+            "500g beef strips",
+            "1 onion, chopped",
+            "2 garlic cloves, minced",
+            "200g mushrooms, sliced",
+            "200ml beef broth",
+            "100g sour cream",
+            "2 tablespoons butter",
+            "Salt and pepper to taste"
+        ],
+        "steps": [
+            "Sauté onions and garlic in butter until translucent.",
+            "Add mushrooms and cook until they are soft.",
+            "Brown the beef strips in the pan and then remove them.",
+            "Deglaze the pan with beef broth and add sour cream.",
+            "Return the beef and mushrooms to the pan and mix well.",
+            "Serve over noodles or rice."
+        ],
+        "instructions": [
+            "Sauté onions and garlic.",
+            "Add mushrooms and beef.",
+            "Prepare sauce with broth and sour cream.",
+            "Combine beef and mushrooms with sauce.",
+            "Serve with noodles or rice."
+        ],
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 4,
+        "title": "Margherita Pizza",
+        "summary": "A simple pizza with fresh tomatoes, mozzarella cheese, and basil.",
+        "ingredients": [
+            "1 pizza dough",
+            "200g tomato sauce",
+            "200g fresh mozzarella cheese",
+            "Fresh basil leaves",
+            "Olive oil",
+            "Salt and pepper to taste"
+        ],
+        "steps": [
+            "Prepare the pizza dough and let it rise.",
+            "Spread tomato sauce over the dough.",
+            "Add slices of fresh mozzarella and basil leaves.",
+            "Drizzle with olive oil.",
+            "Bake in a hot oven until the crust is crispy and golden.",
+            "Garnish with additional fresh basil."
+        ],
+        "instructions": [
+            "Prepare dough.",
+            "Add tomato sauce.",
+            "Top with cheese and basil.",
+            "Bake and garnish."
+        ],
+        "image": "https://via.placeholder.com/150"
+    }
+]
