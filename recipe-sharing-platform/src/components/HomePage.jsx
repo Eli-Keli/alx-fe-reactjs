@@ -1,28 +1,39 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
+import recipeData from '../data.json';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-    const [recipe, setRecipe] = useState()
+    const [recipes, setRecipes] = useState()
 
     useEffect(() => {
         //  load the recipe data from data.json
-        const fetchRecipe = async () => {
-            const response = await fetch("http://localhost:3000/recipes")
-            const data = await response.json()
-            setRecipe(data)
-        }
-        fetchRecipe()
+        setRecipes(recipeData);
     }, [])
+
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="w-full p-4">
-                {recipe && recipe.map((item) => (
-                    <div key={item.id} className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-                        <img className="w-full object-cover mx-auto rounded-t-lg" src={item.image} alt={item.title} />
-                        <div className="p-4">
-                            <h1 className="text-2xl font-bold mb-2">{item.title}</h1>
-                            <p className="text-gray-600">{item.summary}</p>
-                        </div>
+        <div className="container mx-auto p-6 relative">
+            <div className="flex justify-start mb-6 cursor-pointer md:justify-center lg:justify-center lg:font-semibold">
+                <h3 className='font-bold cursor-pointer text-sm py-2 px-2 bg-gray-500'>RECIPE APP</h3>
+            </div>
+
+            <p className='font-semibold text-gray-700'>
+                Unlock the joy of cooking with step-by-step recipes tailored to your taste. Explore, create, and share your favorite dishes today!
+            </p>
+
+            <h1 className="text-3xl font-bold text-center mb-8 text-gray-700">Our Recipes</h1>
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {recipes && recipes.map((recipe) => (
+                    <div key={recipe.id} className="w-full p-4">
+                        <Link to={`/recipe/${recipe.id}`}>
+                            <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                                <img className="w-full object-cover mx-auto rounded-t-lg" src={recipe.image} alt={recipe.title} />
+                                <div className="p-4">
+                                    <h1 className="text-2xl font-bold mb-2">{recipe.title}</h1>
+                                    <p className="text-gray-600">{recipe.summary}</p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>
