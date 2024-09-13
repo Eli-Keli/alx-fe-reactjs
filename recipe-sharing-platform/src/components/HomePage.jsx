@@ -13,8 +13,11 @@ const HomePage = () => {
 
     return (
         <div className="container mx-auto p-6 relative">
-            <div className="flex justify-start mb-6 cursor-pointer md:justify-center lg:justify-center lg:font-semibold">
-                <h3 className='font-bold cursor-pointer text-sm py-2 px-2 bg-gray-500'>RECIPE APP</h3>
+            <div className="flex justify-start mb-6 md:justify-center lg:justify-center lg:font-semibold">
+                <h3 className='font-bold text-2xl py-2 px-2 mr-8'>RECIPE APP</h3>
+                <Link to="/add-recipe" className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full">
+                    Create a Recipe
+                </Link>
             </div>
 
             <p className='font-semibold text-gray-700'>
