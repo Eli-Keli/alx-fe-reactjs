@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
-const SearchInput = ({ onSearch }) => {
+const Search = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSubmit = (e) => {
@@ -31,4 +31,4 @@ const SearchInput = ({ onSearch }) => {
     );
 };
 
-export default SearchInput;
+export default Search;
